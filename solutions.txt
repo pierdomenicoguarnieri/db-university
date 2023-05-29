@@ -37,3 +37,6 @@ SOLUZIONI:
 6. SELECT *
   FROM `degrees`
   WHERE `level` = 'magistrale';
+
+7. SELECT COUNT(*) AS `number_of_departments`
+  FROM `departments`;
