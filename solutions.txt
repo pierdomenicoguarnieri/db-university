@@ -13,3 +13,7 @@ SOLUZIONI:
 2. SELECT *
   FROM `courses`
   WHERE `cfu` > 10;
+
+3. SELECT *
+  FROM `students`
+  WHERE (2023 - YEAR(`date_of_birth`)) = 30;
