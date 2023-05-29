@@ -40,3 +40,7 @@ SOLUZIONI:
 
 7. SELECT COUNT(*) AS `number_of_departments`
   FROM `departments`;
+
+8. SELECT COUNT(*) AS `number_of_teachers_without_number`
+  FROM `teachers`
+  WHERE `phone` IS NULL;
