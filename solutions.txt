@@ -23,3 +23,8 @@ SOLUZIONI:
   SELECT *
   FROM `students`
   WHERE DATEDIFF(NOW(), `date_of_birth`)/365.25 > 30;
+
+4. SELECT *
+  FROM `courses`
+  WHERE `period` = 'I semestre'
+  AND `year` = 1;
