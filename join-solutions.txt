@@ -20,3 +20,11 @@ SOLUZIONI
   INNER JOIN `teachers`
   ON `teachers`.`id` = `course_teacher`.`teacher_id`
   WHERE `teachers`.`id` = 44;
+
+4. SELECT `students`.`id`, `students`.`surname`, `students`.`name`, `students`.`date_of_birth`, `students`.`email`, `students`.`registration_number`, `departments`.`name`, `degrees`.`name`
+  FROM `departments`
+  INNER JOIN `degrees`
+  ON `departments`.`id` = `degrees`.`department_id`
+  INNER JOIN `students`
+  ON `degrees`.`id` = `students`.`degree_id`
+  ORDER BY `students`.`surname`, `students`.`name`;
