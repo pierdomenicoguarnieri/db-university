@@ -1,9 +1,14 @@
 SOLUZIONI
 
-1. SELECT `students`.`name`, `students`.`surname`, `students`.`registration_number`
-  FROM `departments`
-  INNER JOIN `degrees`
-  ON `departments`.`id` = `degrees`.`department_id`
+1. SELECT `students`.`id`, `students`.`name`, `students`.`surname`, `students`.`registration_number`
+  FROM `degrees`
   INNER JOIN `students`
   ON `degrees`.`id` = `students`.`degree_id`
   WHERE `degrees`.`name` = 'Corso di Laurea in Economia';
+
+2. SELECT `degrees`.`id`, `degrees`.`name`, `degrees`.`level`, `degrees`.`address`, `degrees`.`email`, `degrees`.`website`
+  FROM `departments`
+  INNER JOIN `degrees`
+  ON `departments`.`id` = `degrees`.`department_id`
+  WHERE `departments`.`name` = 'Dipartimento di Neuroscienze'
+  AND `degrees`.`level` = 'magistrale';
