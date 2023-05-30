@@ -12,3 +12,11 @@ SOLUZIONI
   ON `departments`.`id` = `degrees`.`department_id`
   WHERE `departments`.`name` = 'Dipartimento di Neuroscienze'
   AND `degrees`.`level` = 'magistrale';
+
+3. SELECT `courses`.`id`, `courses`.`name`, `courses`.`period`, `courses`.`year`, `courses`.`cfu`
+  FROM `courses`
+  INNER JOIN `course_teacher`
+  ON `courses`.`id` = `course_teacher`.`course_id`
+  INNER JOIN `teachers`
+  ON `teachers`.`id` = `course_teacher`.`teacher_id`
+  WHERE `teachers`.`id` = 44;
