@@ -1,0 +1,9 @@
+SOLUZIONI
+
+1. SELECT `students`.`name`, `students`.`surname`, `students`.`registration_number`
+  FROM `departments`
+  INNER JOIN `degrees`
+  ON `departments`.`id` = `degrees`.`department_id`
+  INNER JOIN `students`
+  ON `degrees`.`id` = `students`.`degree_id`
+  WHERE `degrees`.`name` = 'Corso di Laurea in Economia';
